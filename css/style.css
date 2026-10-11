@@ -1,0 +1,49 @@
+/* 1. Định dạng thân trang (Body) */
+body {
+  background-color: #f0f8ff; /* Màu nền xanh nhạt dễ chịu */
+  color: #333333;           /* Chữ màu xám đậm để dễ đọc */
+  font-family: Arial, sans-serif; /* Font chữ cơ bản */
+  font-size: 16px;          /* Cỡ chữ chuẩn */
+}
+
+/* 2. Định dạng 3 cấp tiêu đề (Headings) */
+h1 {
+  color: #d35400;           /* Màu cam đậm */
+  font-size: 34px;          /* Chữ to nhất */
+}
+
+h2 {
+  color: #2980b9;           /* Màu xanh dương */
+  font-size: 26px;          /* Chữ to vừa */
+}
+
+h3 {
+  color: #27ae60;           /* Màu xanh lá cây */
+  font-size: 20px;          /* Chữ nhỏ hơn */
+  font-style: italic;       /* Chữ in nghiêng cho khác biệt */
+}
+
+/* 3. Định dạng đoạn văn (Paragraphs) */
+p {
+  line-height: 1.8;         /* Giãn dòng ra cho dễ đọc (đề bài yêu cầu) */
+  margin-bottom: 15px;      /* Khoảng cách dưới mỗi đoạn văn */
+}
+
+/* 4. Định dạng hình ảnh (Image) */
+img {
+  max-width: 100%;          /* Đề bài yêu cầu: max-width để ảnh không bị tràn */
+  border: 5px solid #bdc3c7; /* Đề bài yêu cầu: Tạo khung viền màu xám cho ảnh */
+  border-radius: 10px;      /* Bo tròn góc ảnh */
+  margin: 10px 0;           /* Tạo khoảng cách trên dưới cho ảnh */
+}
+
+/* 5. Định dạng danh sách (List) */
+ul {
+  padding-left: 20px;       /* Thụt lề cho danh sách */
+  list-style-type: square;  /* Đổi dấu chấm tròn thành hình vuông */
+}
+
+ul li {
+  line-height: 1.8;
+  color: #8e44ad;           /* Đổi màu chữ danh sách thành màu tím */
+}
