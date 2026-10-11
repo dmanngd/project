@@ -1,49 +1,102 @@
-/* 1. Định dạng thân trang (Body) */
+/* 1. Reset khoảng cách mặc định (Mẹo lấy điểm) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Giúp padding không làm tăng kích thước hộp */
+}
+
 body {
-  background-color: #f0f8ff; /* Màu nền xanh nhạt dễ chịu */
-  color: #333333;           /* Chữ màu xám đậm để dễ đọc */
-  font-family: Arial, sans-serif; /* Font chữ cơ bản */
-  font-size: 16px;          /* Cỡ chữ chuẩn */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Màu nền xám nhạt cho toàn trang */
+    color: #333;
+    line-height: 1.6;
 }
 
-/* 2. Định dạng 3 cấp tiêu đề (Headings) */
-h1 {
-  color: #d35400;           /* Màu cam đậm */
-  font-size: 34px;          /* Chữ to nhất */
+/* 2. Header: Banner trên cùng */
+header {
+    background-color: #2c3e50; /* Màu tối */
+    color: #ffffff;            /* Chữ trắng */
+    text-align: center;
+    padding: 30px 20px;
 }
 
-h2 {
-  color: #2980b9;           /* Màu xanh dương */
-  font-size: 26px;          /* Chữ to vừa */
+/* 3. Navigation: Thanh menu ngang */
+nav {
+    background-color: #34495e;
 }
 
-h3 {
-  color: #27ae60;           /* Màu xanh lá cây */
-  font-size: 20px;          /* Chữ nhỏ hơn */
-  font-style: italic;       /* Chữ in nghiêng cho khác biệt */
+nav ul {
+    list-style: none; /* Bỏ dấu chấm tròn */
+    text-align: center; /* Căn giữa các nút */
+    padding: 10px 0;
 }
 
-/* 3. Định dạng đoạn văn (Paragraphs) */
-p {
-  line-height: 1.8;         /* Giãn dòng ra cho dễ đọc (đề bài yêu cầu) */
-  margin-bottom: 15px;      /* Khoảng cách dưới mỗi đoạn văn */
+nav ul li {
+    display: inline-block; /* Giúp các thẻ li nằm ngang */
+    margin: 0 15px;
 }
 
-/* 4. Định dạng hình ảnh (Image) */
-img {
-  max-width: 100%;          /* Đề bài yêu cầu: max-width để ảnh không bị tràn */
-  border: 5px solid #bdc3c7; /* Đề bài yêu cầu: Tạo khung viền màu xám cho ảnh */
-  border-radius: 10px;      /* Bo tròn góc ảnh */
-  margin: 10px 0;           /* Tạo khoảng cách trên dưới cho ảnh */
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Bỏ gạch chân link */
+    font-weight: bold;
+    font-size: 16px;
+    padding: 5px 10px;
 }
 
-/* 5. Định dạng danh sách (List) */
-ul {
-  padding-left: 20px;       /* Thụt lề cho danh sách */
-  list-style-type: square;  /* Đổi dấu chấm tròn thành hình vuông */
+nav ul li a:hover, nav ul li a.active {
+    background-color: #e74c3c; /* Đổi màu cam khi di chuột hoặc đang ở trang đó */
+    border-radius: 5px;
 }
 
-ul li {
-  line-height: 1.8;
-  color: #8e44ad;           /* Đổi màu chữ danh sách thành màu tím */
+/* 4. Khung bọc Content để chia 2 cột bằng Flexbox */
+.content-wrapper {
+    display: flex;
+    justify-content: space-between; /* Đẩy main và aside ra xa nhau */
+    max-width: 1000px; /* Giới hạn chiều rộng trang (yêu cầu đề bài) */
+    margin: 20px auto; /* Căn giữa màn hình */
+    padding: 0 20px;
+}
+
+/* 5. Main Content: Cột chính bên trái */
+main {
+    flex-basis: 70%; /* Chiếm 70% chiều rộng */
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main h2 {
+    color: #2980b9;
+    margin-bottom: 15px;
+}
+
+/* 6. Aside: Cột phụ bên phải */
+aside {
+    flex-basis: 25%; /* Chiếm 25% chiều rộng */
+    background-color: #ecf0f1;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+aside h3 {
+    color: #d35400;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+/* 7. Footer: Chân trang */
+footer {
+    background-color: #2c3e50; /* Khác màu với main/aside */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 20px;
+    clear: both; /* Dọn dẹp lỗi tràn (đề bài yêu cầu) */
 }
